@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseService } from 'src/app/shared-services/base.service';
 
 @Component({
   selector: 'app-bs-navbar',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BsNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public bs:BaseService) { }
 
   ngOnInit(): void {
   }
 
+  logout(){
+    this.bs.logout();
+  }
 }

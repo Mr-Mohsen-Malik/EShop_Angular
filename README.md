@@ -13,3 +13,6 @@ Tech stak include:
 	2. BootStrap.
 	3. Firebase.
 	n. And other, don't know right now what I ended up using in future ;).
+
+
+Note : Hosting URL: https://eshop-angular-8c3c7.web.app

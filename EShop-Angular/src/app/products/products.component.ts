@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseService } from '../shared-services/base.service';
 
 @Component({
   selector: 'app-products',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  Products:Array<object> = [];
+  constructor(public bs:BaseService) { }
 
   ngOnInit(): void {
+    this.bs.getProducts().subscribe(data => {
+      console.log("******DATA******")
+      this.Products = data.map(d => {
+        return {
+          id: d.payload.doc.id,
+          ...d.payload.doc.data() as {}
+        }
+      });
+      console.log(this.Products)
+    })
   }
 
 }
