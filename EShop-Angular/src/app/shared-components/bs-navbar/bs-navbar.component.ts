@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BaseService } from 'src/app/shared-services/base.service';
+import { AuthService } from 'src/app/shared-services/auth.service';
 
 @Component({
   selector: 'app-bs-navbar',
@@ -8,12 +8,12 @@ import { BaseService } from 'src/app/shared-services/base.service';
 })
 export class BsNavbarComponent implements OnInit {
 
-  constructor(public bs:BaseService) { }
+  constructor(public authSrvc:AuthService) { }
 
   ngOnInit(): void {
   }
 
   logout(){
-    this.bs.logout();
+    this.authSrvc.logout();
   }
 }

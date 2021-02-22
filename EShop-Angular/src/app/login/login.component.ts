@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BaseService } from '../shared-services/base.service';
+import { AuthService } from '../shared-services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +8,13 @@ import { BaseService } from '../shared-services/base.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private bs:BaseService) { }
+  constructor(private authSrvc:AuthService) { }
 
   ngOnInit(): void {
   }
 
   login(){
-    this.bs.login();
+    this.authSrvc.login();
   }
 
 }
