@@ -1,0 +1,14 @@
+{
+    "validations":{
+        "title":"Please specify the title",
+        "price":"Please specify the price",
+        "category":"Please select the category",
+        "imageUrl":"Please specify the imageUrl"
+    },
+    "labels":{
+        "title":"Title",
+        "price":"Price",
+        "category":"Category",
+        "imageUrl":"ImageUrl"
+    }
+}
